@@ -1,4 +1,5 @@
 import {
+    BadRequestException,
     Body,
     Controller,
     Delete,
@@ -17,6 +18,7 @@ export class ArticlesController {
 
     @Post()
     getHello(@Body() body: CreateArticle): string {
+        // throw new BadRequestException()
         return this.articleService.getHello()
     }
     @Get()
